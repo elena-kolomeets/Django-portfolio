@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .navigation {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+        .navigation input {
+            color: white;
+            margin: 5px;
+            background-color: #765E8D;
+            border: None;
+            width: 100px;
+            height: 30px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        }
+        .navigation input:hover {
+            background-color: #5e4969;
+        }
+        article {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            width: 77%
+        }
+        section:hover {
+            background-color: Snow;
+        }
+        h1{
+            color: #5e4969;
+            text-align: center;
+        }
+        h3{
+            color: #765E8D;
+        }
+    </style>
+    <title>Blog</title>
+</head>
+<body>
+    <header>
+        <nav class="navigation">
+            <a>
+                <input type="submit" value="Resume">
+            </a>
+            <br/>
+            <a href="{% url 'home' %}">
+                <input type="submit" value="Portfolio">
+            </a>
+        </nav>
+    </header>
+    <main>
+        <h1>Blog</h1>
+        <br/><br/><br/><br/>
+        <article>
+            {% for blog in blogs %}
+            <section>
+                <h3>{{ blog.title }}</h3>
+                <p style="color: #c5a0c5">{{ blog.date }}</p>
+                <p>{{ blog.text }}</p>
+                {% if blog.url %}
+                <a href="{{ blog.url }}" target="_blank">Link</a>
+                {% endif %}
+                <br/>
+            </section>
+            {% endfor %}
+        </article>
+            <br/><br/><br/><br/><br/><br/><br/>
+            <br/><br/><br/><br/><br/><br/><br/>
+            <br/><br/><br/><br/><br/><br/><br/>
+    </main>
+</body>
+</html>
