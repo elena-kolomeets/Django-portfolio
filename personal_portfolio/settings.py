@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,7 +21,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-with open('C:/Users/Elena/OneDrive/Документы/programming/Python/Django_Udemy/portfolio_secret_key.txt') as f:
+current_dir = os.path.dirname(os.path.realpath(__file__))
+target_dir = os.path.sep.join(current_dir.split(os.path.sep)[:-2])
+with open(f'{target_dir}/portfolio_secret_key.txt') as f:
     SECRET_KEY = f.read().strip()
 
 # SECURITY WARNING: don't run with debug turned on in production!
