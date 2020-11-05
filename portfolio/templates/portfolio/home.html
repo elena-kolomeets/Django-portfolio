@@ -8,7 +8,20 @@
             flex-direction: row;
             justify-content: flex-end;
         }
-        .navigation input {
+        .nav_btn {
+            color: black;
+            margin: 5px;
+            background-color: white;
+            border: none;
+            outline:none;
+            width: 100px;
+            height: 30px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        }
+        .nav_btn:hover {
+            background-color: Teal;
+        }
+        .blog_btn {
             color: white;
             margin: 5px;
             background-color: Teal;
@@ -18,7 +31,7 @@
             height: 30px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
         }
-        .navigation input:hover {
+        .blog_btn:hover {
             background-color: #006666;
         }
         main {
@@ -80,10 +93,13 @@
             margin: 10px;
         }
         .btn:hover {
-            background-color: Teal;
+            background-color: #009999;
         }
 
         @media (max-width: 800px) {
+            .navigation {
+                justify-content: center;
+            }
             section {
                 flex-direction: column;
             }
@@ -103,28 +119,75 @@
         h1 {
             color: #006666;
             text-align: center;
+            font-weight: normal;
+            text-shadow: 0.5px 0.3px SlateGray;
+        }
+        h2 {
+            color: DarkSlateGray;
+            text-align: center;
+            font-weight: normal;
+            font-size: 1.7em;
+            text-shadow: 0.5px 0.3px SlateGray;
         }
         h3 {
             color: Teal;
         }
+        hr {
+            border-top: 1px solid Gray;
+            border-left: 1px solid white;
+            border-right: 1px solid white;
+            border-bottom: 1px solid white;
+        }
+        .foot {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .foot a:link {
+            color: Gray;
+            text-decoration: none;
+        }
+        .foot a:visited {
+            color: Gray;
+            text-decoration: none;
+        }
+        .foot a:hover {
+            color: Teal;
+            text-decoration: none;
+        }
+        .foot a:active {
+            color: Teal;
+            text-decoration: none;
+        }
     </style>
-    <title>My Portfolio</title>
+    <title>Elena's Portfolio</title>
 </head>
 <body>
+<!-- to use static files put the {% load static %} tag in the beginning
+    and <img src="{% static 'portfolio/filename' %}"/> -->
+
     <header>
-        <nav class="navigation">
-            <a>
-                <input type="submit" value="Resume">
-            </a>
-            <br/>
-            <a href="{% url 'all_blogs' %}">
-                <input type="submit" value="Blog">
-            </a>
+        <nav>
+            <div class="navigation">
+                <a href="https://www.linkedin.com/in/elena-kolomeets-72063517a/" target="_blank">
+                    <input class="nav_btn" type="submit" value="LinkedIn">
+                </a>
+                <br/>
+                <a href="https://github.com/elena-kolomeets" target="_blank">
+                    <input class="nav_btn" type="submit" value="GitHub">
+                </a>
+                <br/>
+                <a href="{% url 'blog:all_blogs' %}">
+                    <input class="blog_btn" type="submit" value="Blog">
+                </a>
+            </div>
         </nav>
     </header>
     <main>
-        <h1>Portfolio</h1>
-        <br/><br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/>
+        <h1>Elena Kolomeets</h1>
+        <h2>Portfolio</h2>
+        <br/><br/>
         <article>
             {% for project in projects %}
             <section>
@@ -151,16 +214,28 @@
             {% if project.gif %}
             <div class="gifs" id="{{ project.id }}" style="display: none;">
                 <br/>
-                <img src="{{ project.gif.url }}" alt="The GIF should be here" style="height: 350px;"/>
+                <img src="{{ project.gif.url }}" alt="The GIF should be here" style="max-height: 350px;"/>
                 <br/>
             </div>
+            {% else %}
+            <div></div>
             {% endif %}
             {% endfor %}
         </article>
         <br/><br/><br/><br/><br/><br/><br/>
         <br/><br/><br/><br/><br/><br/><br/>
-        <br/><br/><br/><br/><br/><br/><br/>
     </main>
+    <footer>
+        <hr/>
+        <br/><br/><br/>
+        <div class="foot">
+            <a href="https://www.linkedin.com/in/elena-kolomeets-72063517a/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/elena-kolomeets" target="_blank">GitHub</a>
+            <a href="{% url 'blog:all_blogs' %}">Blog</a>
+            <a href="">&copy;  Elena Kolomeets 2020</a>
+        </div>
+        <br/><br/><br/>
+    </footer>
     <script type = "text/javaScript">
         function toggle(id) {
             var x = document.getElementById(id);
@@ -170,7 +245,6 @@
                 x.style.display = 'none';
                 }
         }
-
     </script>
 </body>
 </html>
