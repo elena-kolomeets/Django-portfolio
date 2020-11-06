@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <style>
+        html {
+            border-left:
+            padding-left: 50px;
+        }
         .navigation {
             display: flex;
             flex-direction: row;
@@ -14,25 +18,25 @@
             background-color: white;
             border: none;
             outline:none;
-            width: 100px;
+            width: 90px;
             height: 30px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
         }
         .nav_btn:hover {
-            background-color: #765E8D;
+            background-color: SteelBlue;
         }
         .portf_btn {
             color: white;
             margin: 5px;
-            background-color: #765E8D;
+            background-color: SteelBlue;
             border: none;
             outline:none;
-            width: 100px;
+            width: 90px;
             height: 30px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
         }
         .portf_btn:hover {
-            background-color: #5e4969;
+            background-color: #325d81;
         }
         main {
             display: flex;
@@ -51,26 +55,26 @@
             width: 50%;
         }
         section:hover {
-            background-color: Snow;
+            background-color: #eef3f7;
         }
         section a:link {
-            color: #765E8D;
+            color: SteelBlue;
             text-decoration: none;
         }
         section a:visited {
-            color: #765E8D;
+            color: SteelBlue;
             text-decoration: none;
         }
         section a:hover {
-            color: #513f5a;
+            color: #325d81;
             text-decoration: none;
         }
         section a:active {
-            color: #5e4969;
+            color: SteelBlue;
             text-decoration: none;
         }
         h1{
-            color: #5e4969;
+            color: #325d81;
             text-align: center;
             font-weight: normal;
             text-shadow: 0.5px 0.3px SlateGray;
@@ -81,8 +85,15 @@
             font-weight: normal;
             font-size: 1.7em;
         }
-        .blog {
+        h4 {
+            font-weight: normal;
             font-size: 1.2em;
+        }
+        h5 {
+            color: LightSteelBlue;
+            font-size: 1em;
+            font-weight: normal;
+            margin: 0px;
         }
         hr {
             border-top: 1px solid Gray;
@@ -96,25 +107,20 @@
             justify-content: space-around;
         }
         .foot a:link {
-            color: Gray;
+            color: SteelBlue;
             text-decoration: none;
         }
         .foot a:visited {
-            color: Gray;
+            color: SteelBlue;
             text-decoration: none;
         }
         .foot a:hover {
-            color: #5e4969;
-            text-decoration: none;
-        }
-        .foot a:active {
             color: Gray;
             text-decoration: none;
         }
-        @media (max-width: 800px) {
-            .navigation {
-                    justify-content: center;
-                }
+        .foot a:active {
+            color: SteelBlue;
+            text-decoration: none;
         }
     </style>
     <title>Elena's Blog</title>
@@ -145,12 +151,8 @@
             {% for blog in blogs %}
             <section>
                 <a href="{% url 'blog:detail' blog.id %}"><h3>{{ blog.title }}</h3></a>
-                <p style="color: #c5a0c5">{{ blog.date }}</p>
-                <p class="blog">{{ blog.text }}</p>
-                {% if blog.url %}
-                <br/>
-                <a href="{{ blog.url }}" target="_blank">Link</a>
-                {% endif %}
+                <h5>{{ blog.date }}</h5>
+                <h4>{{ blog.text }}</h4>
                 <br/>
             </section>
             {% endfor %}
@@ -163,9 +165,10 @@
         <hr/>
         <br/><br/><br/>
         <div class="foot">
+            <a href="{% url 'home' %}">Portfolio</a>
             <a href="https://www.linkedin.com/in/elena-kolomeets-72063517a/" target="_blank">LinkedIn</a>
             <a href="https://github.com/elena-kolomeets" target="_blank">GitHub</a>
-            <a href="{% url 'home' %}">Portfolio</a>
+            <a href="mailto:kolomeets.elena7gmail.com">Email</a>
             <a href="">&copy;  Elena Kolomeets 2020</a>
         </div>
         <br/><br/><br/>

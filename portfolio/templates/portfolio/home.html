@@ -14,20 +14,20 @@
             background-color: white;
             border: none;
             outline:none;
-            width: 100px;
+            width: 90px;
             height: 30px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
         }
         .nav_btn:hover {
-            background-color: Teal;
+            background-color: #009999;
         }
         .blog_btn {
             color: white;
             margin: 5px;
-            background-color: Teal;
+            background-color: #009999;
             border: none;
             outline:none;
-            width: 100px;
+            width: 90px;
             height: 30px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
         }
@@ -97,9 +97,6 @@
         }
 
         @media (max-width: 800px) {
-            .navigation {
-                justify-content: center;
-            }
             section {
                 flex-direction: column;
             }
@@ -144,19 +141,19 @@
             justify-content: space-around;
         }
         .foot a:link {
-            color: Gray;
+            color: #006666;
             text-decoration: none;
         }
         .foot a:visited {
-            color: Gray;
+            color: #006666;
             text-decoration: none;
         }
         .foot a:hover {
-            color: Teal;
+            color: Gray;
             text-decoration: none;
         }
         .foot a:active {
-            color: Teal;
+            color: #006666;
             text-decoration: none;
         }
     </style>
@@ -229,9 +226,10 @@
         <hr/>
         <br/><br/><br/>
         <div class="foot">
+            <a href="{% url 'blog:all_blogs' %}">Blog</a>
             <a href="https://www.linkedin.com/in/elena-kolomeets-72063517a/" target="_blank">LinkedIn</a>
             <a href="https://github.com/elena-kolomeets" target="_blank">GitHub</a>
-            <a href="{% url 'blog:all_blogs' %}">Blog</a>
+            <a href="mailto:kolomeets.elena7gmail.com">Email</a>
             <a href="">&copy;  Elena Kolomeets 2020</a>
         </div>
         <br/><br/><br/>
