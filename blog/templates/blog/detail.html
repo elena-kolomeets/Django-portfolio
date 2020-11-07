@@ -1,90 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <style>
-        html {
-            background-color:
-        }
-        .navigation {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-        }
-        .nav_btn {
-            color: white;
-            margin: 5px;
-            background-color: SteelBlue;
-            border: none;
-            outline:none;
-            width: 90px;
-            height: 30px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-        }
-        .nav_btn:hover {
-            background-color: #325d81;
-        }
-        article {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            width: 80%;
-            padding-left: 50px;
-        }
-        h1 {
-            color: #325d81;
-            font-weight: normal;
-            font-size: 2em;
-            text-shadow: 0.5px 0.3px SlateGray;
-            text-align: left;
-            margin-left: 45px;
-        }
-        h4 {
-            font-weight: normal;
-            font-size: 1.2em;
-            text-align: left;
-            margin: 45px;
-        }
-        h5 {
-            color: LightSteelBlue;
-            font-size: 1.1em;
-            font-weight: normal;
-            text-align: left;
-            margin-left: 45px;
-            margin-top: 0px;
+    {% load static %}
 
-        }
-        hr {
-            border-top: 1px solid Gray;
-            border-left: 1px solid white;
-            border-right: 1px solid white;
-            border-bottom: 1px solid white;
-        }
-        .foot {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-        }
-        .foot a:link {
-            color: SteelBlue;
-            text-decoration: none;
-        }
-        .foot a:visited {
-            color: SteelBlue;
-            text-decoration: none;
-        }
-        .foot a:hover {
-            color: Gray;
-            text-decoration: none;
-        }
-        .foot a:active {
-            color: SteelBlue;
-            text-decoration: none;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Blog {{ blog.id }}</title>
+    <link rel="icon" type="image/png" href="{% static 'blog/images/favicon.ico' %}">
 </head>
 <body>
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/detail.css' %}">
     <header>
         <nav>
             <div class="navigation">
@@ -103,9 +28,9 @@
         <article>
             <div>
                 <h1>{{ blog.title }}</h1>
-                <h5>{{ blog.date }}</h5>
+                <h5>{{ blog.date|date:'M d Y' }}</h5>
                 <br/>
-                <h4>{{ blog.text|urlizetrunc:20 }}</h4>
+                <h4>{{ blog.text|safe }}</h4>
             </div>
         </article>
         <br/><br/><br/><br/>

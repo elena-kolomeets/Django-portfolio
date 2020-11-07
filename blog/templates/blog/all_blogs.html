@@ -1,131 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
+
     <meta charset="UTF-8">
-    <style>
-        html {
-            border-left:
-            padding-left: 50px;
-        }
-        .navigation {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-        }
-        .nav_btn {
-            color: black;
-            margin: 5px;
-            background-color: white;
-            border: none;
-            outline:none;
-            width: 90px;
-            height: 30px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-        }
-        .nav_btn:hover {
-            background-color: SteelBlue;
-        }
-        .portf_btn {
-            color: white;
-            margin: 5px;
-            background-color: SteelBlue;
-            border: none;
-            outline:none;
-            width: 90px;
-            height: 30px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-        }
-        .portf_btn:hover {
-            background-color: #325d81;
-        }
-        main {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        article {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        section {
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-            width: 50%;
-        }
-        section:hover {
-            background-color: #eef3f7;
-        }
-        section a:link {
-            color: SteelBlue;
-            text-decoration: none;
-        }
-        section a:visited {
-            color: SteelBlue;
-            text-decoration: none;
-        }
-        section a:hover {
-            color: #325d81;
-            text-decoration: none;
-        }
-        section a:active {
-            color: SteelBlue;
-            text-decoration: none;
-        }
-        h1{
-            color: #325d81;
-            text-align: center;
-            font-weight: normal;
-            text-shadow: 0.5px 0.3px SlateGray;
-        }
-        h2 {
-            color: DarkSlateGray;
-            text-align: center;
-            font-weight: normal;
-            font-size: 1.7em;
-        }
-        h4 {
-            font-weight: normal;
-            font-size: 1.2em;
-        }
-        h5 {
-            color: LightSteelBlue;
-            font-size: 1em;
-            font-weight: normal;
-            margin: 0px;
-        }
-        hr {
-            border-top: 1px solid Gray;
-            border-left: 1px solid white;
-            border-right: 1px solid white;
-            border-bottom: 1px solid white;
-        }
-        .foot {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-        }
-        .foot a:link {
-            color: SteelBlue;
-            text-decoration: none;
-        }
-        .foot a:visited {
-            color: SteelBlue;
-            text-decoration: none;
-        }
-        .foot a:hover {
-            color: Gray;
-            text-decoration: none;
-        }
-        .foot a:active {
-            color: SteelBlue;
-            text-decoration: none;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="{% static 'blog/images/favicon.ico' %}">
     <title>Elena's Blog</title>
 </head>
 <body>
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/all_blogs.css' %}">
     <header>
         <nav>
             <div class="navigation">
@@ -151,9 +35,8 @@
             {% for blog in blogs %}
             <section>
                 <a href="{% url 'blog:detail' blog.id %}"><h3>{{ blog.title }}</h3></a>
-                <h5>{{ blog.date }}</h5>
-                <h4>{{ blog.text }}</h4>
-                <br/>
+                <h5>{{ blog.date|date:'M d Y' }}</h5>
+                <h4>{{ blog.text|striptags|truncatechars:100 }}</h4>
             </section>
             {% endfor %}
         </article>

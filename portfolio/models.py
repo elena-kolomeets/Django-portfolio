@@ -8,3 +8,6 @@ class Project(models.Model):
     gif = models.ImageField(upload_to='portfolio/gifs/', blank=True)
     github = models.URLField(default='https://github.com/elena-kolomeets')
     url = models.URLField(blank=True)
+
+    def __str__(self):
+        return self.title

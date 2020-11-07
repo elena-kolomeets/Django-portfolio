@@ -1,0 +1,80 @@
+main {
+    background-image: url("images/bgblue1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: white;
+    margin: -8px;
+}
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.nav_btn {
+    color: white;
+    margin: 5px;
+    background-color: SteelBlue;
+    border: none;
+    outline:none;
+    width: 90px;
+    height: 30px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.nav_btn:hover {
+    background-color: #325d81;
+}
+article {
+    width: 90%;
+    padding-left: 50px;
+}
+h1 {
+    color: #325d81;
+    font-weight: normal;
+    font-size: 2em;
+    text-shadow: 0.5px 0.3px SlateGray;
+    text-align: left;
+    margin-left: 45px;
+}
+h4 {
+    font-weight: normal;
+    font-size: 1.2em;
+    text-align: left;
+    margin: 45px;
+}
+h5 {
+    color: LightSteelBlue;
+    font-size: 1.1em;
+    font-weight: normal;
+    text-align: left;
+    margin-left: 45px;
+    margin-top: 0px;
+
+}
+hr {
+    border-top: 1px solid LightGray;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+}
+.foot {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.foot a:link {
+    color: SteelBlue;
+    text-decoration: none;
+}
+.foot a:visited {
+    color: SteelBlue;
+    text-decoration: none;
+}
+.foot a:hover {
+    color: Gray;
+    text-decoration: none;
+}
+.foot a:active {
+    color: SteelBlue;
+    text-decoration: none;
+}

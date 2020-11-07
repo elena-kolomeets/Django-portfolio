@@ -1,0 +1,117 @@
+main {
+    background-image: url("images/bgblue.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: white;
+    margin: -8px;
+}
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.nav_btn {
+    color: black;
+    margin: 5px;
+    background-color: white;
+    border: none;
+    outline:none;
+    width: 90px;
+    height: 30px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.nav_btn:hover {
+    background-color: SteelBlue;
+}
+.portf_btn {
+    color: white;
+    margin: 5px;
+    background-color: SteelBlue;
+    border: none;
+    outline:none;
+    width: 90px;
+    height: 30px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.portf_btn:hover {
+    background-color: #325d81;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 70%;
+}
+section a:link {
+    color: SteelBlue;
+    text-decoration: none;
+}
+section a:visited {
+    color: SteelBlue;
+    text-decoration: none;
+}
+section a:hover {
+    color: #325d81;
+    text-decoration: none;
+}
+section a:active {
+    color: SteelBlue;
+    text-decoration: none;
+}
+h1{
+    color: #325d81;
+    text-align: center;
+    font-weight: normal;
+    text-shadow: 0.5px 0.3px SlateGray;
+}
+h3 {
+    font-size: 1.3em;
+}
+h4 {
+    font-weight: normal;
+    font-size: 1.2em;
+}
+h5 {
+    color: LightSteelBlue;
+    font-size: 1em;
+    font-weight: normal;
+    margin: 0px;
+}
+hr {
+    border-top: 1px solid LightGray;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+}
+.foot {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.foot a:link {
+    color: SteelBlue;
+    text-decoration: none;
+}
+.foot a:visited {
+    color: SteelBlue;
+    text-decoration: none;
+}
+.foot a:hover {
+    color: Gray;
+    text-decoration: none;
+}
+.foot a:active {
+    color: SteelBlue;
+    text-decoration: none;
+}

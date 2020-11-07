@@ -7,3 +7,6 @@ class Blog(models.Model):
     date = models.DateField(default=date.today)
     text = models.TextField()
     url = models.URLField(blank=True)
+
+    def __str__(self):
+        return self.title
