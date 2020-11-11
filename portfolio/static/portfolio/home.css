@@ -1,3 +1,6 @@
+html {
+    font-family: 'Playfair Display', serif;
+}
 .navigation {
     display: flex;
     flex-direction: row;
@@ -12,6 +15,8 @@
     width: 90px;
     height: 30px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    font-family: 'Playfair Display', serif;
+    font-size: 0.9em;
 }
 .nav_btn:hover {
     background-color: #009999;
@@ -25,6 +30,9 @@
     width: 90px;
     height: 30px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    font-family: 'Playfair Display', serif;
+    font-size: 0.9em;
+
 }
 .blog_btn:hover {
     background-color: #006666;
@@ -45,7 +53,7 @@ section {
     align-items: center;
     text-align: center;
     padding: 20px;
-    width: 85%
+    width: 80%
 }
 section:nth-child(even) {
     display: flex;
@@ -86,6 +94,9 @@ img {
     width: 70px;
     height: 30px;
     margin: 10px;
+    font-family: 'Playfair Display', serif;
+    font-size: 0.9em;
+
 }
 .btn:hover {
     background-color: #009999;

@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="image/png" href="{% static 'portfolio/images/favicon.ico' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <title>Elena's Portfolio</title>
 </head>
 <body>
@@ -60,7 +61,7 @@
             {% if project.gif %}
             <div class="gifs" id="{{ project.id }}" style="display: none;">
                 <br/>
-                <img src="{{ project.gif.url }}" alt="The GIF should be here" style="max-height: 350px;"/>
+                <img src="{{ project.gif.url }}" alt="The GIF should be here" style="max-height: 300px;"/>
                 <br/>
             </div>
             {% else %}
