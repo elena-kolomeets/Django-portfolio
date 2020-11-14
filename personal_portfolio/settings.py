@@ -187,5 +187,5 @@ STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 # MEDIA_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, MEDIA_LOCATION)
 DEFAULT_FILE_STORAGE = 'personal_portfolio.storage_backends.MediaStorage'
 
-
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 django_heroku.settings(config=locals(), staticfiles=False, logging=False)
