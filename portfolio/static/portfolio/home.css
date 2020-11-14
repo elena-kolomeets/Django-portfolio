@@ -1,3 +1,6 @@
+::selection {
+  background: LightCyan;
+}
 html {
     font-family: 'Playfair Display', serif;
 }
@@ -41,6 +44,8 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation-name: appear;
+    animation-duration: 2s;
 }
 article {
     display: flex;
@@ -161,4 +166,8 @@ hr {
 .foot a:active {
     color: #006666;
     text-decoration: none;
+}
+@keyframes appear {
+    from {opacity: 0;}
+    to {opacity: 100%;}
 }

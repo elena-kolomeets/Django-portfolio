@@ -1,3 +1,6 @@
+::selection {
+  background: #c4e3ed;
+}
 html {
     font-family: 'Playfair Display', serif;
 }
@@ -53,11 +56,13 @@ article {
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation-name: appear;
+    animation-duration: 1s;
 }
 section {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding-top: 10px;
     width: 70%;
 }
 section a:link {
@@ -81,6 +86,8 @@ h1{
     text-align: center;
     font-weight: normal;
     text-shadow: 0.5px 0.3px SlateGray;
+    animation-name: appear;
+    animation-duration: 1s;
 }
 h3 {
     font-size: 1.3em;
@@ -121,4 +128,8 @@ hr {
 .foot a:active {
     color: SteelBlue;
     text-decoration: none;
+}
+@keyframes appear {
+    from {opacity: 0;}
+    to {opacity: 100%;}
 }

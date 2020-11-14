@@ -1,3 +1,6 @@
+::selection {
+  background: #c4e3ed;
+}
 html {
     font-family: 'Playfair Display', serif;
 }
@@ -35,6 +38,8 @@ main {
 article {
     width: 80%;
     padding-left: 20px;
+    animation-name: appear;
+    animation-duration: 1s;
 }
 h1 {
     color: #325d81;
@@ -90,4 +95,8 @@ hr {
     article {
         width: 100%;
     }
+}
+@keyframes appear {
+    from {opacity: 0;}
+    to {opacity: 100%;}
 }
