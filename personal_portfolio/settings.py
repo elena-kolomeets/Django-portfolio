@@ -135,9 +135,9 @@ USE_TZ = True
 #     MEDIA_URL = '/media/'
 #     MEDIA_ROOT = BASE_DIR / 'media'
 
-AWS_ACCESS_KEY_ID = os.environ['aws_access_key_id']
-AWS_SECRET_ACCESS_KEY = os.environ['aws_secret_access_key']
-AWS_STORAGE_BUCKET_NAME = os.environ['s3_bucket_name']
+AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
+AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
+AWS_STORAGE_BUCKET_NAME = os.environ['S3_BUCKET_NAME']
 AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 STATIC_LOCATION = 'static'
 STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, STATIC_LOCATION)
