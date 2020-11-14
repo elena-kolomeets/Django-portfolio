@@ -15,6 +15,7 @@ import os
 import environ
 import dj_database_url
 import django_heroku
+import psycopg2
 
 environ.Env.read_env()
 
@@ -82,8 +83,18 @@ WSGI_APPLICATION = 'personal_portfolio.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {}
-DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'portfoliodb',
+        'USER': 'postgres',
+        'PASSWORD': os.environ['portfoliodb_pass'],
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+DATABASE_URL = os.environ['DATABASE_URL']
+conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
 LOGGING = {
     'version': 1,
@@ -180,3 +191,5 @@ STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 DEFAULT_FILE_STORAGE = 'personal_portfolio.storage_backends.MediaStorage'
 
 django_heroku.settings(config=locals(), staticfiles=False, logging=False)
+db_from_env = dj_database_url.config(conn_max_age=600, ssl_require=True)
+DATABASES['default'].update(db_from_env)
