@@ -14,7 +14,7 @@ from pathlib import Path
 import os
 import environ
 import dj_database_url
-
+import django_heroku
 
 environ.Env.read_env()
 
@@ -185,8 +185,6 @@ STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 MEDIA_LOCATION = 'media'
 MEDIA_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, MEDIA_LOCATION)
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'blog/static'),
-    os.path.join(BASE_DIR, 'portfolio/static'),
-]
 
+
+django_heroku.settings(config=locals(), staticfiles=False, logging=False)
