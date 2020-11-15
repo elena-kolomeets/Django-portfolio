@@ -159,6 +159,11 @@ hr {
     .navigation {
         justify-content: center;
     }
+    .nav_btn, .blog_btn {
+        width: 100px;
+        height: 40px;
+        font-size: 1em;
+    }
     section {
         flex-direction: column;
     }
@@ -176,10 +181,11 @@ hr {
     }
     .foot {
         flex-direction: column;
-        text-align: center;
-        justify-content: space-around;
-        font-size: 1.1em;
-        padding-top: 15px;
+    }
+    .foot1, .foot2 {
+        display: flex;
+        flex-direction: row;
+        justify-content; space-around;
     }
 }
 @keyframes appear {

@@ -139,15 +139,21 @@ hr {
     .navigation {
         justify-content: center;
     }
+    .nav_btn, .portf_btn {
+        width: 100px;
+        height: 40px;
+        font-size: 1em;
+    }
     section {
         width: 90%;
     }
     .foot {
         flex-direction: column;
-        text-align: center;
-        justify-content: space-around;
-        font-size: 1.1em;
-        padding-top: 15px;
+    }
+    .foot1, .foot2 {
+        display: flex;
+        flex-direction: row;
+        justify-content; space-around;
     }
 @keyframes appear {
     from {opacity: 0;}

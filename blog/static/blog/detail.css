@@ -101,6 +101,11 @@ hr {
     .navigation {
         justify-content: center;
     }
+    .nav_btn {
+        width: 100px;
+        height: 40px;
+        font-size: 1em;
+    }
     article {
         width: 105%;
         padding: 0px;
@@ -110,9 +115,11 @@ hr {
     }
     .foot {
         flex-direction: column;
-        text-align: center;
-        font-size: 1.1em;
-        padding-top: 15px;
+    }
+    .foot1, .foot2 {
+        display: flex;
+        flex-direction: row;
+        justify-content; space-around;
     }
 }
 @keyframes appear {
