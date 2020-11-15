@@ -1,6 +1,12 @@
 ::selection {
   background: #c4e3ed;
 }
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    opacity: 1;
+}
 html {
     font-family: 'Playfair Display', serif;
 }
@@ -129,6 +135,13 @@ hr {
     color: SteelBlue;
     text-decoration: none;
 }
+@media (max-width: 700px)  {
+    .navigation {
+        justify-content: center;
+    }
+    .foot {
+        flex-wrap: wrap;
+    }
 @keyframes appear {
     from {opacity: 0;}
     to {opacity: 100%;}

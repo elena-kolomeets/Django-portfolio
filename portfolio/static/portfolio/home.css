@@ -1,6 +1,12 @@
 ::selection {
   background: LightCyan;
 }
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    opacity: 1;
+}
 html {
     font-family: 'Playfair Display', serif;
 }
@@ -106,24 +112,6 @@ img {
 .btn:hover {
     background-color: #009999;
 }
-
-@media (max-width: 800px) {
-    section {
-        flex-direction: column;
-    }
-    section:nth-child(even) {
-        flex-direction: column;
-    }
-    .content {
-        flex: 100%;
-        max-width: 100%;
-        text-align: center;
-    }
-    .img {
-        flex: 100%;
-        max-width: 100%;
-    }
-}
 h1 {
     color: #006666;
     text-align: center;
@@ -166,6 +154,29 @@ hr {
 .foot a:active {
     color: #006666;
     text-decoration: none;
+}
+@media (max-width: 800px) {
+    .navigation {
+        justify-content: center;
+    }
+    section {
+        flex-direction: column;
+    }
+    section:nth-child(even) {
+        flex-direction: column;
+    }
+    .content {
+        flex: 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+    .img {
+        flex: 100%;
+        max-width: 100%;
+    }
+    .foot {
+        flex-wrap: wrap;
+    }
 }
 @keyframes appear {
     from {opacity: 0;}
