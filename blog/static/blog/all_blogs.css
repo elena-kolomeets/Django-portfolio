@@ -139,8 +139,13 @@ hr {
     .navigation {
         justify-content: center;
     }
+    section {
+        width: 90%;
+    }
     .foot {
-        flex-wrap: wrap;
+        flex-direction: column;
+        text-align: center;
+        font-size: 1em;
     }
 @keyframes appear {
     from {opacity: 0;}
