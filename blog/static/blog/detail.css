@@ -111,8 +111,8 @@ hr {
     .foot {
         flex-direction: column;
         text-align: center;
-        justify-content: space-around;
         font-size: 1.1em;
+        padding-top: 15px;
     }
 }
 @keyframes appear {

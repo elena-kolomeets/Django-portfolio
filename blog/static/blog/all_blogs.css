@@ -147,6 +147,7 @@ hr {
         text-align: center;
         justify-content: space-around;
         font-size: 1.1em;
+        padding-top: 15px;
     }
 @keyframes appear {
     from {opacity: 0;}
