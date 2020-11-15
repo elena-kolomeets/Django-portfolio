@@ -182,10 +182,8 @@ hr {
     .foot {
         flex-direction: column;
     }
-    .foot1, .foot2 {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+    .foot a {
+    padding-top: 10px;
     }
 }
 @keyframes appear {
