@@ -1,5 +1,5 @@
 ::selection {
-  background: LightCyan;
+  background: #93ece7;
 }
 input {
     -webkit-appearance: none;
@@ -47,12 +47,11 @@ html {
     background-color: #006666;
 }
 .name {
-    background-image: url("images/logo.png");
-    background-repeat: no-repeat;
-    background-position: left top;
-    background-color: white;
-    background-size: contain;
-    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+.name img{
+    max-width: 45%;
 }
 main {
     display: flex;
@@ -81,7 +80,7 @@ section:nth-child(even) {
     text-align: center;
 }
 section:hover {
-    background-color: MintCream;
+    background-color: #e9fcfb;
 }
 .content {
     flex-grow: 0;
@@ -171,6 +170,9 @@ hr {
         width: 100px;
         height: 35px;
         font-size: 1em;
+    }
+    .name img{
+    max-width: 60%;
     }
     section {
         flex-direction: column;
