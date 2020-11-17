@@ -52,7 +52,9 @@ html {
     background-position: left top;
     background-color: white;
     background-size: contain;
+    width: 100%;
     padding-left: 50px;
+    padding-right: 50px;
 }
 main {
     display: flex;
