@@ -51,7 +51,7 @@ html {
     justify-content: center;
 }
 .name img{
-    max-width: 45%;
+    max-width: 40%;
 }
 main {
     display: flex;
@@ -172,10 +172,11 @@ hr {
         font-size: 1em;
     }
     .name img{
-    max-width: 60%;
+    max-width: 65%;
     }
     section {
         flex-direction: column;
+        width:80%;
     }
     section:nth-child(even) {
         flex-direction: column;
