@@ -9,12 +9,13 @@ input {
 }
 html {
     font-family: 'Playfair Display', serif;
+    overflow-x: hidden;
 }
 main {
     background-image: url("images/bgblue1.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: center;
+    background-size: cover;
     background-color: white;
     margin: -8px;
     display: flex;
@@ -110,6 +111,15 @@ hr {
         width: 110%;
         padding: 0px;
         margin: -10px;
+    }
+    h1 {
+    font-size: 1.6em;
+    }
+    h3 {
+    font-size: 1.2em;
+    }
+    h4 {
+    font-size: 1.1em;
     }
     h5 {
         font-size: 1em;
