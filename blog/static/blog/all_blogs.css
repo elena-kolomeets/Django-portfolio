@@ -163,6 +163,7 @@ hr {
     .foot a {
         padding-top: 10px;
     }
+}
 @keyframes appear {
     from {opacity: 0;}
     to {opacity: 100%;}
