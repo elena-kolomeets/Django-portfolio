@@ -53,6 +53,9 @@ html {
 .name img{
     max-width: 40%;
     max-height: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 main {
     display: flex;
@@ -174,6 +177,7 @@ hr {
     }
     .name img{
     max-width: 65%;
+    max-height: 100%;
     }
     section {
         flex-direction: column;
