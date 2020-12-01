@@ -176,8 +176,7 @@ hr {
         font-size: 1em;
     }
     .name img{
-    max-width: 65%;
-    max-height: 100%;
+    width: 65%;
     }
     section {
         flex-direction: column;
