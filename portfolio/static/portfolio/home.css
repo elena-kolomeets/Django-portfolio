@@ -47,7 +47,7 @@ html {
     background-color: #006666;
 }
 .name {
-    margin: 0 auto;
+    text-align: center;
 }
 .name img{
     max-width: 40%;
@@ -172,7 +172,7 @@ hr {
         font-size: 1em;
     }
     .name img{
-        width: 65%;
+        max-width: 65%;
         height: auto;
     }
     section {
